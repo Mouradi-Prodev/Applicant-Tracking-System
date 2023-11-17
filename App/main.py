@@ -1,4 +1,3 @@
-from io import BytesIO
 import streamlit as st
 import docx2txt as doc
 import PyPDF2
@@ -44,7 +43,7 @@ def Process(res,job_description):
     match = round(match,2)
     st.divider()
     st.markdown('**Matching Percentage : **'+str(match)+'%')
-    
+
     col1, col2 = st.columns([2, 2])
     with col1:
         st.pyplot(draw_percentage_circle(match))
